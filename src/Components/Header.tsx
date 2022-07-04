@@ -12,8 +12,10 @@ import {
     Typography
 } from '@mui/material';
 import React from 'react';
+import useStyle from './Styles/HeaderStyle';
 
 function MainHeader(){
+    const headerStyle = useStyle();
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -36,45 +38,20 @@ function MainHeader(){
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
+                    <Typography className={headerStyle.typography}
                         variant="h6"
                         noWrap
                         component="a"
                         href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
                     >
                         LOGO
                     </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-
-                            <Button
-
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Лиги
-                            </Button>
-
+                    <Box className={headerStyle.box}>
+                            <Button className={headerStyle.button} onClick={handleCloseNavMenu}>Лиги</Button>
                     </Box>
-                    <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
-                        <Button
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 1, color: 'white', display: 'block' }}
-                        >
-                            Команды
-                        </Button>
-
+                    <Box className={headerStyle.box}>
+                        <Button className={headerStyle.button} onClick={handleCloseNavMenu}>Команды</Button>
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>
