@@ -1,6 +1,6 @@
 import React from 'react';
 import {CardActionArea, CardContent, Typography} from "@mui/material";
-import {Card} from './LeagueCardStyle';
+import {Card} from './Card';
 
 const LeagueCard= () => {
     return(
