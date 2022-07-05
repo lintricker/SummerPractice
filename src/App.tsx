@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import MainHeader from './Components/Header';
-import LeaguePage from './Components/LeaguePage';
+import MainHeader from './Components/Header/Header';
+import LeaguePage from './Components/LeaguePage/LeaguePage';
 
 function App() {
   return (

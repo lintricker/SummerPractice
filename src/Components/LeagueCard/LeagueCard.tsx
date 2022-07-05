@@ -1,10 +1,11 @@
 import React from 'react';
-import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
+import {CardActionArea, CardContent, Typography} from "@mui/material";
+import {Card} from './LeagueCardStyle';
 
 const LeagueCard= () => {
     return(
         <div className='container'>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
             <CardActionArea>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
