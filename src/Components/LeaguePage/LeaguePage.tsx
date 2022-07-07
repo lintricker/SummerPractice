@@ -10,8 +10,8 @@ const LeaguePage = () => {
         <TextField id="standard-basic" label="Поиск" variant="standard" />
         <Grid  container  >
                 <Grid  item>
-                    {cards.map((item: number)=>(
-                    <LeagueCard />))}
+                    {cards.map((item: number, index)=>(
+                    <LeagueCard key={index}/>))}
                 </Grid>
         </Grid>
     </div>)
