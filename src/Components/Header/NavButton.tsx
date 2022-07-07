@@ -5,5 +5,5 @@ export const Button = styled(MuiButton)`
     my: 2;
     color: white;
     display: block;
-    margin-left: 2em;
+    margin: auto 32px;
 `;

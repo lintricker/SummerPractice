@@ -4,5 +4,5 @@ export const Grid = styled(MuiGrid)`
   display: flex;
   flex-flow: row wrap;  
   width: 1200px;
-  margin: 20px auto auto auto;  
+  margin: 20px auto;  
 `;
