@@ -2,24 +2,18 @@ import React from 'react';
 import LeagueCard from "../LeagueCard/LeagueCard";
 import { TextField } from './TextField';
 import { Grid } from './Grid';
-import { useSelector, useDispatch } from 'react-redux';
-import { Competition } from '../slices/counterSlice';
-import { } from '../slices/counterSlice';
+import { useSelector } from 'react-redux';
+import { RootState } from '../slices/index';
 
-interface LeagueCardProps{
-    item: Competition
-}
-
-const LeaguePage: React.FC<LeagueCardProps> = ({item}) =>{
-    const count = useSelector((state) => state.counter.competions);
-    const dispatch = useDispatch();
+const LeaguePage: React.FC<{}> = () =>{
+    const count = useSelector((state:RootState) => state.counter.competitions);
     return(
     <div>
         <TextField id="standard-basic" label="Поиск" variant="standard" />
         <Grid  container  >
                 <Grid item>
-                    {count.map((item.name, item.area.name)=>(
-                        <LeagueCard key={item.id}/>))}
+                    {count.map((item)=>(
+                        <LeagueCard key={item.id} item={item}/>))}
                 </Grid>
         </Grid>
     </div>)
