@@ -1,12 +1,11 @@
 import React from 'react';
 import {CardActionArea, CardContent, Typography} from "@mui/material";
 import {Card} from './Card';
-import {Route, Routes,Link} from "react-router-dom";
-import { LeagueTimetable } from '../LeagueTimetable/LeagueTimetable';
+import {Link} from "react-router-dom";
 
 const LeagueCard= () => {
     return(
-        <><Link to="/timetable">
+        <><Link to="/leagues/timetable">
             <div className='container'>
                 <Card>
                     <CardActionArea>
@@ -21,9 +20,7 @@ const LeagueCard= () => {
                     </CardActionArea>
                 </Card>
             </div>
-        </Link><Routes>
-            <Route path="/timetable" element={<LeagueTimetable/>}/>
-        </Routes></>
+        </Link></>
 )
 }
 export default LeagueCard;

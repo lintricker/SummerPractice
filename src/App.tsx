@@ -1,33 +1,20 @@
 import React from 'react';
 import LeaguePage from './Components/LeaguePage/LeaguePage';
-
-import {AppBar, Container, Toolbar} from "@mui/material";
-import {Typography} from "./Components/Header/Typography";
-import {Button} from "./Components/Header/NavButton";
-import { Routes, Route, Link} from "react-router-dom";
+import Header from './Components/Header/Header';
+import { Routes, Route} from "react-router-dom";
 import { Teams } from './Components/Teams/Teams';
+import {LeagueTimetable} from "./Components/LeagueTimetable/LeagueTimetable";
+
 
 function App() {
   return (
     <div className="App">
-        <header>
-            <AppBar position="static">
-                <Container>
-                    <Toolbar disableGutters>
-                        <Typography variant="h6" noWrap>LOGO</Typography>
-                        <div>
-                            <Button><Link to="/">Лиги</Link></Button>
-                        </div>
-                        <div>
-                            <Button><Link to="/teams">Команды</Link></Button>
-                        </div>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </header>
+        <Header />
         <Routes>
-            <Route path="/" element={<LeaguePage />} />
+            <Route index element={<LeaguePage />} />
+            <Route path="/leagues" element={<LeaguePage />} />
             <Route path="/teams" element={<Teams />} />
+            <Route path="/leagues/timetable" element={<LeagueTimetable/>}/>
         </Routes>
     </div>
   );

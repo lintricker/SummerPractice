@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   }
+.active-link{
+  my: 2;
+  color: white;
+  display: block;
+  margin: auto 32px;
+  cursor: default;
+  fontFamily: monospace;
+  fontWeight: 700;
+}
+
+.non-active-link{
+  color: lightgrey;
+  my: 2;
+  display: block;
+  margin: auto 32px;
+  cursor: default;
+  fontFamily: monospace;
+  fontWeight: 700;
+}
