@@ -1,18 +1,32 @@
 import { createSlice } from '@reduxjs/toolkit';
 import mock from '../mock.json';
 
-
-const initialState = {
-    competions: mock.competitions,
+interface Area {
+    id: number,
+    name: string,
+    countryCode: string,
 };
 
-const counterSlice = createSlice({
+export interface Competition {
+    id: number,
+    area: Area,
+    name: string,
+}
+
+interface InitialState {
+    competitions: Competition[]
+};
+
+const initialState: InitialState = {
+    competitions: mock.competitions as Competition[],
+}
+
+export const counterSlice = createSlice({
     name: 'counter',
     initialState,
-    reducers: {}
-    },
-);
+    reducers: {
+    }
+});
 
-//export const {  } = counterSlice.actions;
-
-export default counterSlice;
+export const {  } = counterSlice.actions;
+export default counterSlice.reducer;
