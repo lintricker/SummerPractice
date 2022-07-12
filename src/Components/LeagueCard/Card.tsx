@@ -1,8 +1,7 @@
-import {Card as MuiCard, styled} from "@mui/material";
-
+import { Card as MuiCard, styled } from '@mui/material';
 
 export const Card = styled(MuiCard)`
-  maxWidth: 345px;  
+  max-width: 345px;
   margin: 22px;
   text-align: center;
 `;
