@@ -31,3 +31,9 @@ code {
   fontFamily: monospace;
   fontWeight: 700;
 }
+
+.league-link{
+  fontWeight: 700;
+  color: black;
+  cursor: default;
+}

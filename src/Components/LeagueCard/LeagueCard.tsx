@@ -1,11 +1,11 @@
 import React from 'react';
-import {CardActionArea, CardContent, Typography} from "@mui/material";
-import {Card} from './Card';
-import {Link} from "react-router-dom";
+import { CardActionArea, CardContent, Typography } from "@mui/material";
+import { Card } from './Card';
+import { NavLink } from "react-router-dom";
 
 const LeagueCard= () => {
     return(
-        <><Link to="/leagues/timetable">
+        <><NavLink to="/leagues/timetable" className={({isActive}) => isActive ? 'league-link' : 'non-active-link'}>
             <div className='container'>
                 <Card>
                     <CardActionArea>
@@ -20,7 +20,7 @@ const LeagueCard= () => {
                     </CardActionArea>
                 </Card>
             </div>
-        </Link></>
+        </NavLink></>
 )
 }
 export default LeagueCard;
