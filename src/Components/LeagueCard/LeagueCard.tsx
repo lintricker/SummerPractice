@@ -8,7 +8,7 @@ interface LeagueCardProps {
   item: ICompetition;
 }
 
-const LeagueCard: React.FC<LeagueCardProps> = ({ item }) => {
+const LeagueCard: React.FC<{}> = ({ item }) => {
   return (
     <>
       <NavLink to="timetable">
