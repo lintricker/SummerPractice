@@ -1,9 +1,8 @@
 import React from 'react';
 import {CardActionArea, CardContent, Typography} from "@mui/material";
 import {Card} from './Card';
-import {Route, Routes,Link} from "react-router-dom";
-import { LeagueTimetable } from '../LeagueTimetable/LeagueTimetable';
 import { Competition } from '../slices/counterSlice';
+import { NavLink } from 'react-router-dom';
 
 interface LeagueCardProps{
     item: Competition
@@ -11,7 +10,7 @@ interface LeagueCardProps{
 
 const LeagueCard: React.FC<LeagueCardProps> = ({item}) => {
     return(
-        <><Link to="/timetable">
+        <><NavLink to="timetable">
             <div className='container'>
                 <Card>
                     <CardActionArea>
@@ -22,9 +21,8 @@ const LeagueCard: React.FC<LeagueCardProps> = ({item}) => {
                     </CardActionArea>
                 </Card>
             </div>
-        </Link><Routes>
-            <Route path="/timetable" element={<LeagueTimetable/>}/>
-        </Routes></>
+        </NavLink>
+        </>
 )
 }
 export default LeagueCard;
