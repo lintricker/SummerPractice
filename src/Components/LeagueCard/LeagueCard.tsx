@@ -1,11 +1,11 @@
 import React from 'react';
 import { CardActionArea, CardContent, Typography } from '@mui/material';
 import { Card } from './Card';
-import { Competition } from '../slices/counterSlice';
 import { NavLink } from 'react-router-dom';
+import { ICompetition } from '../slices/leagues/competitionsList';
 
 interface LeagueCardProps {
-  item: Competition;
+  item: ICompetition;
 }
 
 const LeagueCard: React.FC<LeagueCardProps> = ({ item }) => {
