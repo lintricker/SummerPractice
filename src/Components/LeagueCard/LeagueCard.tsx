@@ -1,14 +1,10 @@
 import React from 'react';
 import { CardActionArea, CardContent, Typography } from '@mui/material';
 import { Card } from './Card';
-import { Competition } from '../slices/counterSlice';
 import { NavLink } from 'react-router-dom';
 
-interface LeagueCardProps {
-  item: Competition;
-}
 
-const LeagueCard: React.FC<LeagueCardProps> = ({ item }) => {
+const LeagueCard: React.FC<{}> = ({ item }) => {
   return (
     <>
       <NavLink to="timetable">
