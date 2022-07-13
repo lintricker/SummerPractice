@@ -1,12 +1,22 @@
 import React from 'react';
-import MainHeader from './Components/Header/Header';
 import LeaguePage from './Components/LeaguePage/LeaguePage';
+import Header from './Components/Header/Header';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { Teams } from './Components/Teams/Teams';
+import { LeagueTimetable } from './Components/LeagueTimetable/LeagueTimetable';
 
 function App() {
   return (
     <div className="App">
-      <MainHeader />
-      <LeaguePage />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/leagues" />} />
+        <Route path="/leagues">
+          <Route index={true} element={<LeaguePage />} />
+          <Route path="timetable" element={<LeagueTimetable />} />
+        </Route>
+        <Route path="/teams" element={<Teams />} />
+      </Routes>
     </div>
   );
 }
