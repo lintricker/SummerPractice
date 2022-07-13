@@ -2,7 +2,11 @@ import React from 'react';
 import { CardActionArea, CardContent, Typography } from '@mui/material';
 import { Card } from './Card';
 import { NavLink } from 'react-router-dom';
+import { ICompetition } from '../slices/leagues/competitionsList';
 
+interface LeagueCardProps {
+  item: ICompetition;
+}
 
 const LeagueCard: React.FC<{}> = ({ item }) => {
   return (
