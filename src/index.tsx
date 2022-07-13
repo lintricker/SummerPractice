@@ -10,9 +10,9 @@ import store from './Components/slices/index';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-      <Provider store={store}>
+    <Provider store={store}>
       <BrowserRouter>
-         <App />
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
