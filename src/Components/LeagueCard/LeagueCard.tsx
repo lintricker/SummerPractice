@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const LeagueCard= () => {
     return(
-        <><NavLink to="/leagues/timetable" className={({isActive}) => isActive ? 'league-link' : 'non-active-link'}>
+        <><NavLink to="timetable">
             <div className='container'>
                 <Card>
                     <CardActionArea>

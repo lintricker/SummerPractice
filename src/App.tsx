@@ -12,8 +12,8 @@ function App() {
         <Header />
         <Routes>
             <Route path="/" element={<Navigate replace to="/leagues" />} />
-            <Route path="/leagues" element={<LeaguePage />}>
-                <Route path="/timetable" element={<LeagueTimetable/>}/>
+            <Route path="/leagues" element={<LeaguePage/>}>
+               <Route path="timetable" element={<LeagueTimetable/>}/>
             </Route>
             <Route path="/teams" element={<Teams />}/>
         </Routes>
