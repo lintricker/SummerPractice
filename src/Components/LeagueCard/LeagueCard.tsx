@@ -3,7 +3,8 @@ import { CardActionArea, CardContent, Typography } from '@mui/material';
 import { Card } from './Card';
 import { NavLink } from 'react-router-dom';
 
-const LeagueCard = () => {
+
+const LeagueCard: React.FC<{}> = ({ item }) => {
   return (
     <>
       <NavLink to="timetable">
@@ -12,10 +13,10 @@ const LeagueCard = () => {
             <CardActionArea>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  World ChampionShip
+                  {item.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Russia
+                  {item.area.name}
                 </Typography>
               </CardContent>
             </CardActionArea>
